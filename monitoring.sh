@@ -1,3 +1,8 @@
+#!/bin/bash
+
+#just for funny
+bash banneda.sh
+#script by my ayoub mfk
 arch=$(uname -a)
 ncpu=$(lscpu | grep 'Socket(s):'  | tr -d 'a-zA-Z(): ')
 vcpu=$(lscpu | grep '^CPU(s):' | tr -cd '0-9' &&  printf '\n')
@@ -24,7 +29,7 @@ wall "
        #CPU load        : $load
        #last boot       : $lreb
     $(if cat /etc/fstab | grep -q mapper; then
-echo "   #LVM use	     : yes"
+echo "   #LVM use	        : yes"
      else
 	echo "	#LVM use	: no"
      fi)
@@ -32,4 +37,5 @@ echo "   #LVM use	     : yes"
        #User log        : $ulog
        #Network         : IP $ipad $imac
        #Sudo            : $ssud "cmd"
+"
 
